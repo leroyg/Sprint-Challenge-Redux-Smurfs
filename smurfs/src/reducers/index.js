@@ -25,7 +25,36 @@ const initialState = {
        };
      }
 
-    
+    case ADDING_SMURF: {
+      console.log(`we're adding smurfs`)
+      const newSmurf = {
+        value: action.payload
+      }
+      return {
+        ...state,
+        gettingSmurfs: false,
+        addingSmurf: true,
+        updatingSmurf: false,
+        deletingSmurf: false,
+        smurfs: [...state.smurfs, newSmurf]
+      }
+    }
+
+    case DELETING_SMURF: {
+      console.log(`we're removing smurfs`);
+      return {
+        ...state,
+        gettingSmurfs: false,
+        addingSmurf: false,
+        updatingSmurf: false,
+        deletingSmurf: true,
+      }
+    }
+
+    case ERROR:
+      console.log(`You've broken something.`)
+      break;
+      default: return state;
 
    }
  }
