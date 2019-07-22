@@ -21,9 +21,9 @@ export const gettingSmurfs = () => dispatch => {
         payload: res.data
       })
     })
-    .catch(err => {
-      console.log("error", err.response);
-      dispatch({ type: ERROR, payload: err})
+    .catch(error => {
+      console.log("error", error.response);
+      dispatch({ type: ERROR, payload: error})
     })
 }
 /*

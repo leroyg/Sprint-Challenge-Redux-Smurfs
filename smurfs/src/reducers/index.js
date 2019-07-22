@@ -12,6 +12,23 @@ const initialState = {
    error: null
  }
 
+ export const reducer = (state - initialState, action) => {
+   switch (action.type) {
+     case GETTING_SMURFS: {
+       console.log(`we've got smurfs`);
+       return {
+         ...state,
+         gettingSmurfs: true,
+         addingSmurf: false,
+         updatingSmurf: false,
+         deletingSmurf: false,
+       };
+     }
+
+    
+
+   }
+ }
 
 /*
   You'll only need one smurf reducer for this project.
