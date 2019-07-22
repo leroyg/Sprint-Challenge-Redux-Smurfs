@@ -12,7 +12,7 @@ const initialState = {
    error: null
  }
 
- export const reducer = (state - initialState, action) => {
+ export const reducer = (state = initialState, action) => {
    switch (action.type) {
      case GETTING_SMURFS: {
        console.log(`we've got smurfs`);
@@ -24,6 +24,18 @@ const initialState = {
          deletingSmurf: false,
        };
      }
+
+     case UPDATING_SMURF: {
+      console.log('updating smurfs');
+      return {
+        ...state,
+        gettingSmurfs: false,
+        addingSmurf: false,
+        updatingSmurf: true,
+        deletingSmurf: false,
+        smurfs: action.payload,
+      }
+    }
 
     case ADDING_SMURF: {
       console.log(`we're adding smurfs`)
