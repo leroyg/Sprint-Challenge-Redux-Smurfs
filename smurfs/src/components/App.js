@@ -20,7 +20,7 @@ class App extends Component {
     console.log(this.props);
   }
 
-  changeHandler = e => {
+  changeHandler = event => {
     this.setState({ [event.target.name]: event.target.value });
   }
 
