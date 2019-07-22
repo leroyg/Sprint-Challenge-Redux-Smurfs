@@ -22,9 +22,20 @@ In this challenge, you are to build the Smurfs village once again, only this tim
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
-- [ ] What is the difference between Application state and Component state? When would be a good time to use one over the other?
-- [ ] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+- [X] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+
+`Actions` are contain information and move it from your data store. `Reducers` define those actions and how and what aspects of state should change/update. `Store` combines them all in a modular way. Our single source of truth in a React-Redux application is our store because it holds all the information needed for the components to work. 
+
+
+- [X] What is the difference between Application state and Component state? When would be a good time to use one over the other?
+
+Application state is the reference for the whole application, and component state is only local to that component. If a component only needs to update locally and not pass anything to the rest of the app it is best to use component state. 
+
+
+- [X] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+
+
+This is a middleware that helps us by calling our action creators and using them as functions instead of objects within our React application. It helps us to manage the state. 
 
 ## Project Set Up
 
